@@ -12,6 +12,8 @@ logs
 .env
 
 # Ignore IDE specific files
+../specProject/.idea/
+.DS_Store
 .idea/
 .vscode/
 *.sw*
