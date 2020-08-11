@@ -1,24 +1,21 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 
 	// 1
-	//var login, email string
-	//fmt.Scan(&login)
-	//fmt.Scan(&email)
-	//
-	//if utf8.RuneCountInString(login) < 10 || strings.Contains(login, "@") {
-	//	fmt.Println("Некорректный логин")
-	//} else if !(strings.Contains(email, "@") && strings.Contains(email, ".")) {
-	//	fmt.Println("Некорректная почта")
-	//} else {
-	//	fmt.Println("ОК")
-	//}
+	/*var login, email string
+	fmt.Scan(&login)
+	fmt.Scan(&email)
 
+	if utf8.RuneCountInString(login) < 10 || strings.Contains(login, "@") {
+		fmt.Println("Некорректный логин")
+	} else if !(strings.Contains(email, "@") && strings.Contains(email, ".")) {
+		fmt.Println("Некорректная почта")
+	} else {
+		fmt.Println("ОК")
+	}*/
 
 	// 2
 	const cConst = 75
@@ -29,6 +26,15 @@ func main() {
 		fmt.Println("BOOMER")
 	} else {
 		fmt.Println("ZOOMER")
+	}
+
+	// 3
+	a, b := 22.5, 23.5
+
+	if int(a+b)%2 == 0 {
+		fmt.Println("Четное")
+	} else {
+		fmt.Println("Нечетное")
 	}
 
 }
