@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 
-
+	iteration()
 }
 
 func initial() {
@@ -33,8 +33,7 @@ func initial() {
 	//anotherArr = dotArr
 }
 
-
-func iteration(){
+func iteration() {
 	var a = [3]string{"Moscow", "SPB", "KZN"}
 	b := a
 	b[0] = "Monaco"
@@ -47,4 +46,6 @@ func iteration(){
 	for i, v := range a {
 		fmt.Println("Index:", i, "Value:", v)
 	}
+	fmt.Println(a)
+	fmt.Println(b)
 }
