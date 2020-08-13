@@ -41,8 +41,8 @@ func initialSlice() {
 	newCity[0] = "Monaco"
 	fmt.Println("New city:", newCity[:2])
 	fmt.Println("City:", city)
-}
 
+}
 
 func iterationSlice() {
 

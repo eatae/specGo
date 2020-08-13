@@ -4,7 +4,7 @@ import "fmt"
 
 func trianglePerimeter(a, b, c float64) (result, area float64) {
 	result = a + b + c
-	area = a * b * c //WRONG
+	area = a * b * c // WRONG
 	return
 }
 
@@ -28,7 +28,6 @@ func calcSum(a ...int) int {
 	return 2
 }
 
-
 // FindNum for ...
 func FindNum(num int, nums ...int) {
 	found := false
@@ -44,8 +43,6 @@ func FindNum(num int, nums ...int) {
 }
 
 // FindNum(20, slice...)
-
-
 
 func main() {
 	width, length := 23.5, 12.5
