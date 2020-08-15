@@ -1,35 +1,55 @@
-
 package main
 
 import "fmt"
 
 func main() {
-	first := 123
-	// init
-	var firstPtr *int = &first
+	var first int = 123
+	var firstPointer *int = &first
+	fmt.Println(firstPointer)
 
-	fmt.Printf("Type of firstPtr: %T and value %v\n", firstPtr, firstPtr)
-	*firstPtr += 200
-	fmt.Println("New value of first:", first)
-
-	//Pointer zero value
+	/* pointer zero value == nil */
 	var zeroPtr *int
-	//*zeroPtr++
-	if zeroPtr == nil {
-		fmt.Println("Old Value in ZeroPtr:", zeroPtr)
-		zeroPtr = &first
-		fmt.Println("New Value in ZeroPtr:", zeroPtr)
-	}
+	fmt.Println(zeroPtr)
 
-	// new()
-	width := new(int)
-	*width++
-	fmt.Printf("Type width: %T, value width: %v\n", width, width)
-	fmt.Printf("Type of *width %T, and value of *width %v\n", *width, *width)
+	/* разыменование */
+	*firstPointer = 200
+	fmt.Println(first)
 
-	// нельзя использовать указатели, нужно разименовывать
-	//temp := 36.6
-	//tempPtr := &temp
-	//tempPtr++
+	/* default type pointer by new() */
+	defaultPointer := new(int) // create pointer to default int value
+	*defaultPointer++
+	fmt.Printf("Type defaultPointer: %T, value defaultPointer: %v\n", defaultPointer, defaultPointer)
+	fmt.Printf("Type *defaultPointer: %T, value *defaultPointer: %v\n", *defaultPointer, *defaultPointer)
 
+	/* pointer in function args  */
+	a := 55
+	aPointer := &a
+	changer(aPointer)
+	fmt.Println(a)
+
+	/* return a pointer from a function */
+	temp := returning() // вернётся указатель
+	fmt.Println(*temp)
+
+	/* go way ideomatic */
+	nums := [3]int{1, 2, 3}
+	sliceChanger(nums[:])
+	fmt.Println(nums)
+
+}
+
+/* function expected pointer */
+func changer(num *int) {
+	*num += 10
+}
+
+/* function return a pointer from */
+func returning() *int {
+	someVal := 10
+	return &someVal // возвращаем ссылку на 10
+}
+
+/* go way ideomatic */
+func sliceChanger(sls []int) {
+	sls[0] = 500
 }

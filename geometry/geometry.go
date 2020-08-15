@@ -6,7 +6,6 @@ import (
 )
 
 func init() {
-	testFunc()
 	fmt.Println("Init geometry")
 }
 
@@ -19,8 +18,14 @@ func main() {
 	fmt.Println("Area: ", area)
 	fmt.Println("Perimeter: ", perimeter)
 	fmt.Println("A: ", rectangle.A)
+
+	slice := []int{0, 10, 20, 30}
+	fmt.Println(slice)
+	Modify(slice)
+	fmt.Println(slice)
 }
 
-func testFunc() {
-	fmt.Println("Test func!")
+func Modify(sl []int) {
+	sl[0] = 100
+	sl = append(sl, 2000)
 }
