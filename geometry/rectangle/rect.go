@@ -2,7 +2,7 @@ package rectangle
 
 import (
 	"fmt"
-	"specGO/geometry/triangle"
+	"specGo/geometry/triangle"
 )
 
 //A

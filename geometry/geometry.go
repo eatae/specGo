@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"specGO/geometry/rectangle"
+	"specGo/geometry/rectangle"
 )
 
 func init() {
