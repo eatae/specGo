@@ -19,8 +19,9 @@ func main() {
 	//		fmt.Println("Receive from channel: ", val)
 	//	}
 	//}
+
 	// или
-	for val := range chNums { // пока итерируется канал
+	for val := range chNums { // range - пока итерируется канал
 		fmt.Println("Receive from channel: ", val)
 	}
 }
